@@ -1,16 +1,15 @@
-# React + Vite
+# Pediforte Job Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is still in development.
 
-Currently, two official plugins are available:
+Currently, it's been developed with React, Tailwindcss for the frontend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+This a job board and networking app. You can hire potential talents and look for jobs that are tailored to you or your team needs.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Find Jobs or Hire Talents
 
-## Expanding the ESLint configuration
+-To find jobs, head on over to our jobs section to find jobs that are tailored to your skills.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-You can also network with your peers in the industry. Build networks and stay on top of industry trends.
