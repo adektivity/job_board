@@ -1,0 +1,55 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+@layer base {
+  body {
+    @apply bg-ui-bg text-ui-text;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+
+  section {
+    @apply py-8 min-h-screen;
+  }
+
+  header {
+    @apply top-0 sticky py-4 bg-ui-bg z-50 left-0 w-full;
+  }
+
+  nav {
+    @apply flex justify-between items-center;
+  }
+
+  nav a {
+    @apply mr-4 text-lg font-semibold;
+  }
+}

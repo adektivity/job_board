@@ -1,0 +1,123 @@
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-medium text-xs py-2 px-5 rounded-lg;
+  }
+  .btn-primary {
+    @apply bg-primary text-secondary text-xl w-full;
+  }
+
+  .btn-border {
+    @apply border border-ui-text;
+  }
+
+  /* Icon */
+  .icon {
+    @apply w-4 h-4 inline-block;
+  }
+  .logo {
+    @apply py-1 px-2 bg-primary text-secondary text-xl rounded-xs font-bold;
+  }
+  .signup {
+    @apply bg-black text-secondary p-1 rounded-md;
+  }
+  /* Icon-Input Style */
+  /* .inputWrap{
+    @apply flex justify-center;
+  } */
+  .formWrap {
+    @apply flex relative m-auto h-12.5;
+
+    & input {
+      @apply block w-full p-3 pl-9 pr-20 bg-ui-bg outline-none text-sm border border-ui-text rounded-lg placeholder:text-ui-text focus:ring-1 focus:ring-ui-text;
+    }
+  }
+  .iconWrap {
+    @apply absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none;
+
+    & svg {
+      @apply w-4 h-4;
+    }
+  }
+
+  .form {
+    @apply sm:col-span-5 flex flex-col justify-center gap-3 px-8 lg:px-12;
+
+    & .formHead {
+      @apply capitalize;
+      & h1 {
+        @apply font-bold font-heading;
+      }
+    }
+  }
+
+  .login-pref {
+    @apply flex justify-between items-center  mt-2;
+  }
+
+  /* Auth page image */
+  .image {
+    @apply sm:col-span-7 h-130 hidden sm:block w-full;
+
+    & img {
+      @apply rounded-sm h-120 w-full object-cover object-center;
+    }
+  }
+
+  /* Divider on auth page */
+  .divider {
+    @apply py-3 flex items-center text-xs text-ui-text before:flex-1 before:border-t before:border-ui-text before:me-6 after:flex-1 after:border-t after:border-ui-text after:ms-6;
+  }
+  /* Card for jobs mapping */
+  .card {
+    @apply relative py-3 px-5 border border-ui-text rounded-xl;
+
+    & .save-btn {
+      @apply absolute top-4 right-4 hover:text-gray-400 transition-colors;
+    }
+  }
+
+  /* SearchJobs styles */
+  .search-jobs {
+    @apply bg-gray-300 p-4;
+
+    & .search-title {
+      @apply mb-1;
+    }
+
+    & .search-box {
+      @apply py-4 px-8 bg-ui-bg text-ui-text border border-ui-text rounded-lg capitalize text-xl font-medium;
+
+      & form {
+        @apply flex flex-col md:flex-row md:items-center gap-4;
+
+        & label {
+          @apply mb-1;
+        }
+      }
+    }
+  }
+  /* Error text in forms */
+  .errorText {
+    @apply text-red-500 text-sm mt-1;
+  }
+
+  .fieldLabel {
+    @apply block text-sm font-medium mb-2 capitalize;
+  }
+
+  /* Input style for onboarding */
+  .onboarding {
+    @apply flex flex-col justify-center gap-2;
+  }
+  .inputClass {
+    @apply w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  /* Navigation button styles for onboarding */
+  .nextBtn {
+    @apply px-4 py-2 rounded border border-gray-300 text-sm font-medium hover:bg-gray-50;
+  }
+  .prevBtn {
+    @apply px-4 py-2 rounded bg-blue-600 text-white text-sm font-medium hover:bg-blue-700;
+  }
+}

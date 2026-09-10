@@ -1,0 +1,48 @@
+@utility container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+@utility container-sm {
+  max-width: 40rem;
+}
+
+@utility container-md {
+  max-width: 56rem;
+}
+
+@utility container-lg {
+  max-width: 72rem;
+}
+
+@utility container-xl {
+  max-width: 80rem;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center gap-8;
+  }
+  .flex-row {
+    @apply flex justify-between gap-2;
+  }
+  .flex-col {
+    @apply flex flex-col justify-center gap-4;
+  }
+  .flex-col-left {
+    @apply flex flex-col gap-4;
+  }
+  /* Grid columns */
+  .grid-col-two {
+    @apply grid grid-cols-1 sm:grid-cols-12 gap-2;
+  }
+  .grid-flow {
+    @apply grid grid-cols-1 grid-flow-col auto-cols-fr gap-4;
+  }
+  /* Utility for card details */
+  .details {
+    @apply flex flex-wrap items-center gap-3;
+  }
+}

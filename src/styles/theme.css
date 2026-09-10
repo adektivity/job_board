@@ -1,0 +1,27 @@
+@theme {
+  --color-primary: #165655;
+  --color-secondary: #fff;
+  --color-ui-accent: var(--accent);
+  --color-ui-bg: var(--bg);
+  --color-ui-text: var(--text);
+  --color-ui-btn: var(--buttonColor);
+  --color-ui-teal: #2cdbd899;
+  --color-ui-green: #12a07d;
+  --container-max: 80rem;
+  --container-padding: 1rem;
+  --font-heading: "Idiqlat", serif;
+}
+
+:root {
+  --bg: #fff;
+  --text: #000;
+  --buttonColor: #165655;
+  --accent: #fbce05;
+}
+
+[data-theme="dark"] {
+  --bg: #101727;
+  --text: #ebe8e8;
+  --buttonColor: #165655;
+  --accent: #fbce05;
+}
