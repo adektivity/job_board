@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { AppContext } from "./AppContext";
-import { data } from "react-router-dom";
 
 export const ProvideContext = ({ children }) => {
   // Jobs using Adzuna api
@@ -17,14 +16,14 @@ export const ProvideContext = ({ children }) => {
   const [location, setLocation] = useState("");
   const [jobType, setJobType] = useState("");
   // Query submission
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(null);
 
   const getJobs = async (searchValue = "") => {
     const app_id = import.meta.env.VITE_APP_ID;
     const app_key = import.meta.env.VITE_APP_KEY;
     const page = 1;
     const country = "us";
-    const findJob = "product designer";
+    const findJob = "software engineer";
     // Adzuna api to get and filter jobs
     const url = searchValue
       ? `https://api.adzuna.com/v1/api/jobs/${encodeURIComponent(location)}/search/${page}` +
@@ -69,9 +68,18 @@ export const ProvideContext = ({ children }) => {
       setErrorMessage("Error fetching content: Try refreshing the page!");
     }
   };
+
+  // query submission
+  const submitQuery = (e) => {
+    e.preventDefault();
+    // console.log(`Query sumitted successfully: ${query}`);
+    setQuery({ keyword, location });
+    console.log(`Keyword: ${keyword}, Location: ${location}`);
+  };
   // Adzuna api useEffect
   useEffect(() => {
     getJobs(query);
+    console.log(query);
   }, [query]);
   // Talents useEffect
   useEffect(() => {
@@ -86,14 +94,6 @@ export const ProvideContext = ({ children }) => {
   // Theme toggler
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
-  };
-
-  // query submission
-  const submitQuery = (e) => {
-    e.preventDefault();
-    // console.log(`Query sumitted successfully: ${query}`);
-    setQuery(e);
-    console.log(`Keyword: ${keyword}, Location: ${location}`);
   };
 
   const contextValue = {
