@@ -1,19 +1,16 @@
-import React from "react";
 import {
   formatSalary,
   formatPostedDate,
   formatContractTime,
 } from "../../../utils/FormatJob";
 import {
-  LuCheck,
   LuMapPin,
   LuBookmark,
-  LuStar,
   LuTag,
   LuBriefcaseBusiness,
 } from "react-icons/lu";
 
-const JobCard = ({ result }) => {
+const JobCard = ({ result, handleBookmark }) => {
   const {
     title,
     salary_min,
@@ -23,12 +20,14 @@ const JobCard = ({ result }) => {
     company,
     location,
   } = result;
-  // console.log(contract_time);
   return (
     <>
       <div className="card flex flex-start gap-4 p-4">
         {/* Bookmark button */}
-        <button type="button" className="save-btn">
+        <button
+          type="button"
+          className="save-btn"
+          onClick={() => handleBookmark(result)}>
           <LuBookmark className="icon" />
         </button>
         {/* Company Logo */}

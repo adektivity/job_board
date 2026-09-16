@@ -18,6 +18,9 @@ export const ProvideContext = ({ children }) => {
   // Query submission
   const [query, setQuery] = useState(null);
 
+  // Save Jobs
+  const [savedJobs, setSavedJobs] = useState([]);
+
   const getJobs = async (searchValue = "") => {
     const app_id = import.meta.env.VITE_APP_ID;
     const app_key = import.meta.env.VITE_APP_KEY;
@@ -45,7 +48,7 @@ export const ProvideContext = ({ children }) => {
       }
       const data = await response.json();
       console.log(data);
-      setJobs(data);
+      setJobs(data || []);
     } catch (error) {
       console.log("Error fetching Adzuna Jobs:", error);
       setErrorMessage("Error fetching content: Try refreshing the page!");
@@ -96,6 +99,13 @@ export const ProvideContext = ({ children }) => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
+  // Bookmark jobs/talents function
+  const handleBookmark = (bookmark) => {
+    const toSave = jobs.results.find((job) => job.id === bookmark.id);
+    setSavedJobs((prev) => [...prev, { ...toSave}]);
+    console.log(savedJobs);
+  };
+
   const contextValue = {
     theme,
     toggleTheme,
@@ -107,6 +117,7 @@ export const ProvideContext = ({ children }) => {
     submitQuery,
     talents,
     setTalents,
+    handleBookmark,
   };
   return (
     <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>

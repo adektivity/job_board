@@ -1,10 +1,9 @@
-import React from "react";
 import { useAppContext } from "../../../context/AppContext";
 import JobCard from "./JobCard";
 import SearchJobs from "../SearchJobs";
 
 const FindJobs = () => {
-  const { jobs, errorMessage } = useAppContext();
+  const { jobs, errorMessage, handleBookmark } = useAppContext();
   const { count, results } = jobs;
   // Results not found
   if (!results) {
@@ -17,7 +16,7 @@ const FindJobs = () => {
         {count && <p className="mb-2">{count} Jobs Found</p>}
         {results.map((result) => (
           <div key={result.id} className="mb-4">
-            <JobCard result={result} />
+            <JobCard result={result} handleBookmark={handleBookmark} />
           </div>
         ))}
       </div>
