@@ -1,38 +1,40 @@
+import { NavLink, Outlet } from "react-router-dom";
 import Verified from "../../../assets/icons/verified.svg?react";
-import { LuCheck, LuMapPin } from "react-icons/lu";
+import { LuMapPin } from "react-icons/lu";
 
 const ProfileHeader = () => {
   return (
     <div className="card grid-col-two p-8 bg-linear-to-r from-[#D9D9D9] to-[#737373]">
-      <div className="col-span-2">
-        <img
-          src="/fallback.png"
-          alt=""
-          className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover"
-        />
-      </div>
-      {/* Personal Details */}
-      <div className="col-span-2 sm:col-span-8">
-        <span className="inline-flex items-center gap-1 rounded-full border border-secondary bg-ui-green px-3 py-1 text-xs text-secondary font-semibold">
-          Available for hire
-        </span>
-        <div className="details pr-6">
-          <h3 className="text-lg font-semibold">Aisha Johnson</h3>
-          <span className="inline-flex h-5 w-5 items-center justify-center  shrink-0">
-            <Verified className="icon" />
-          </span>
+      <div className="col-span-6 flex-center-profile">
+        <div className="h-37.5 w-37.5 md:h-40 md:w-40">
+          <img
+            src="/fallback.png"
+            alt=""
+            className="h-full w-full rounded-full object-cover"
+          />
         </div>
-        <div className="mt-1 details gap-x-2 gap-y-1 text-sm font-medium">
-          <span>UI/UX Designer</span>
-          <span className="text-xl font-bold">●</span>
-          <span className="inline-flex items-center gap-1">
-            <LuMapPin className="icon" />
-            Lagos, Nigeria
+        {/* Personal Details */}
+        <div className="flex-col shrink-0">
+          <span className="inline-flex justify-center rounded-full border border-secondary bg-ui-green px-2 py-1 text-xs text-secondary font-semibold">
+            Available for hire
           </span>
+          <div className="details">
+            <h3 className="text-lg font-semibold">Aisha Johnson</h3>
+            <span className="inline-flex h-5 w-5 items-center justify-center shrink-0">
+              <Verified className="icon" />
+            </span>
+          </div>
+          <div className="details-col text-sm font-medium">
+            <span>UI/UX Designer</span>
+            <span className="inline-flex items-center gap-1">
+              <LuMapPin className="icon" />
+              Lagos, Nigeria
+            </span>
+          </div>
         </div>
       </div>
       {/* Compensation */}
-      <div className="hidden sm:col-span-2 sm:flex sm:flex-col items-center justify-center font-bold">
+      <div className="hidden sm:col-span-6 sm:flex sm:flex-col items-center justify-center font-bold">
         <h1>
           #120,000 <span className="text-sm text-gray-500">/yr</span>
         </h1>
@@ -42,16 +44,34 @@ const ProfileHeader = () => {
   );
 };
 
+const ProfileContent = () => {
+  return (
+    <div className="mt-2">
+      <div>
+        <nav className="nav-profile">
+          <NavLink to="overview">overview</NavLink>
+          <NavLink to="portfolio">portfolio</NavLink>
+          <NavLink to="services">services</NavLink>
+          <NavLink to="experience">experience</NavLink>
+          <NavLink to="education">education</NavLink>
+          <NavLink to="reviews">reviews</NavLink>
+        </nav>
+        <Outlet />
+      </div>
+    </div>
+  );
+};
+
 const Profile = () => {
   return (
-    <section>
-      <div className="container">
-        <div>
-          <ProfileHeader />
-        </div>
-        <div>Content</div>
+    <div className="container">
+      <div>
+        <ProfileHeader />
       </div>
-    </section>
+      <div>
+        <ProfileContent />
+      </div>
+    </div>
   );
 };
 

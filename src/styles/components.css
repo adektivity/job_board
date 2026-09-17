@@ -120,4 +120,17 @@
   .prevBtn {
     @apply px-4 py-2 rounded bg-blue-600 text-white text-sm font-medium hover:bg-blue-700;
   }
+
+  /* Profile Page Nav */
+  .nav-profile {
+    @apply capitalize flex justify-between items-center;
+  }
+
+  .nav-profile a {
+    @apply py-2 hover:border-b-2 border-primary;
+  }
+
+  .nav-profile a.active {
+    @apply border-b-2 border-primary;
+  }
 }

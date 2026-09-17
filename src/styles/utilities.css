@@ -25,11 +25,14 @@
   .flex-center {
     @apply flex items-center justify-center gap-8;
   }
+  .flex-center-profile {
+    @apply flex items-center gap-8;
+  }
   .flex-row {
     @apply flex justify-between gap-2;
   }
   .flex-col {
-    @apply flex flex-col justify-center gap-4;
+    @apply flex flex-col items-start justify-center gap-4;
   }
   .flex-col-left {
     @apply flex flex-col gap-4;
@@ -44,5 +47,8 @@
   /* Utility for card details */
   .details {
     @apply flex flex-wrap items-center gap-3;
+  }
+  .details-col {
+    @apply flex flex-col flex-wrap justify-center gap-3;
   }
 }
