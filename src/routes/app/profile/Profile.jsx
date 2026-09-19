@@ -1,12 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
 import Verified from "../../../assets/icons/verified.svg?react";
-import { LuMapPin } from "react-icons/lu";
+import { LuMapPin, LuEllipsis } from "react-icons/lu";
 
 const ProfileHeader = () => {
   return (
-    <div className="card grid-col-two p-8 bg-linear-to-r from-[#D9D9D9] to-[#737373]">
-      <div className="col-span-6 flex-center-profile">
-        <div className="h-37.5 w-37.5 md:h-40 md:w-40">
+    <div className="card grid-col-two p-4 md:p-8 bg-linear-to-r from-[#D9D9D9] to-[#737373]">
+      <div className="col-span-6 flex-center-profile ">
+        <div className="h-37.5 w-37.5 md:h-40 md:w-40 shrink-0">
           <img
             src="/fallback.png"
             alt=""
@@ -14,12 +14,14 @@ const ProfileHeader = () => {
           />
         </div>
         {/* Personal Details */}
-        <div className="flex-col shrink-0">
+        <div className="flex-col min-w-0">
           <span className="inline-flex justify-center rounded-full border border-secondary bg-ui-green px-2 py-1 text-xs text-secondary font-semibold">
             Available for hire
           </span>
-          <div className="details">
-            <h3 className="text-lg font-semibold">Aisha Johnson</h3>
+          <div className="flex items-center gap-2">
+            <h3 className="text-sm sm:text-lg font-semibold truncate min-w-0">
+              Adekoya Johnson
+            </h3>
             <span className="inline-flex h-5 w-5 items-center justify-center shrink-0">
               <Verified className="icon" />
             </span>
@@ -34,11 +36,13 @@ const ProfileHeader = () => {
         </div>
       </div>
       {/* Compensation */}
-      <div className="hidden sm:col-span-6 sm:flex sm:flex-col items-center justify-center font-bold">
-        <h1>
-          #120,000 <span className="text-sm text-gray-500">/yr</span>
-        </h1>
-        <p className="text-sm text-gray-500">Expected Salary</p>
+      <div className="hidden sm:col-span-6 sm:flex items-end justify-end gap-3 font-bold">
+        <button className="profileBtn">Follow</button>
+        <button className="profileBtn">Hire</button>
+        <button className="profileBtn">Message</button>
+        <button className="px-3 py-1 text-sm text-center border border-secondary rounded-sm">
+          <LuEllipsis className="icon" />
+        </button>
       </div>
     </div>
   );
@@ -68,9 +72,9 @@ const Profile = () => {
       <div>
         <ProfileHeader />
       </div>
-      <div>
+      {/* <div>
         <ProfileContent />
-      </div>
+      </div> */}
     </div>
   );
 };

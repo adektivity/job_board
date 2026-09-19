@@ -133,4 +133,9 @@
   .nav-profile a.active {
     @apply border-b-2 border-primary;
   }
+
+  /* Profile buttons */
+  .profileBtn {
+    @apply text-ui-text bg-ui-bg py-1 px-3 text-center text-sm border border-ui-text rounded-sm;
+  }
 }
