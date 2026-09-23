@@ -45,11 +45,11 @@ a {
     @apply top-0 sticky py-4 bg-ui-bg z-50 left-0 w-full;
   }
 
-  nav {
+  .nav {
     @apply flex justify-between items-center;
   }
 
-  nav a {
-    @apply mr-4 text-lg font-semibold;
+  .nav a {
+    @apply mr-4 text-xl font-medium;
   }
 }

@@ -33,7 +33,8 @@ const App = () => {
             <Route path="/feed" element={<Feed />} />
             <Route path="/onboarding" element={<OnboardUser />} />
             <Route path="/profile" element={<Profile />}>
-              <Route index path="overview" element={<Overview />} />
+              <Route index element={<Overview />} />
+              <Route path="overview" element={<Overview />} />
               <Route path="portfolio" element={<Portfolio />} />
               <Route path="services" element={<Services />} />
               <Route path="experience" element={<Experience />} />

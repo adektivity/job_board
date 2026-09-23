@@ -16,7 +16,7 @@
     @apply w-4 h-4 inline-block;
   }
   .logo {
-    @apply py-1 px-2 bg-primary text-secondary text-xl rounded-xs font-bold;
+    @apply py-1 px-3.5 bg-primary text-secondary text-xl rounded-lg font-bold;
   }
   .signup {
     @apply bg-black text-secondary p-1 rounded-md;
@@ -123,15 +123,15 @@
 
   /* Profile Page Nav */
   .nav-profile {
-    @apply capitalize flex justify-between items-center;
+    @apply capitalize flex items-start gap-4 mx-4;
   }
 
   .nav-profile a {
-    @apply py-2 hover:border-b-2 border-primary;
+    @apply py-0.5 font-medium hover:border-b-2 border-ui-text;
   }
 
   .nav-profile a.active {
-    @apply border-b-2 border-primary;
+    @apply border-b-2 border-ui-text;
   }
 
   /* Profile buttons */

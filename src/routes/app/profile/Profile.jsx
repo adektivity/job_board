@@ -20,7 +20,7 @@ const ProfileHeader = () => {
           </span>
           <div className="flex items-center gap-2">
             <h3 className="text-sm sm:text-lg font-semibold truncate min-w-0">
-              Adekoya Johnson
+              Aisha Johnson
             </h3>
             <span className="inline-flex h-5 w-5 items-center justify-center shrink-0">
               <Verified className="icon" />
@@ -60,7 +60,9 @@ const ProfileContent = () => {
           <NavLink to="education">education</NavLink>
           <NavLink to="reviews">reviews</NavLink>
         </nav>
+        <hr className="my-4 border-t-2 border-[#000000CC] opacity-80" />
         <Outlet />
+        
       </div>
     </div>
   );
@@ -72,9 +74,9 @@ const Profile = () => {
       <div>
         <ProfileHeader />
       </div>
-      {/* <div>
+      <div>
         <ProfileContent />
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <header>
       <div className="container">
-        <nav>
+        <nav className="nav">
           <NavLink to="/" className="logo">
             T
           </NavLink>
