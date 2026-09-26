@@ -3,7 +3,7 @@ import Google from "../../../assets/icons/google.svg?react";
 import { LuCheck, LuMapPin, LuBookmark, LuStar } from "react-icons/lu";
 
 const TalentCard = ({ talent }) => {
-  const { profileImage } = talent;
+  const { profileImage, firstName, lastName } = talent;
   return (
     <div className="container">
       <div className="card grid-col-two">
@@ -22,7 +22,9 @@ const TalentCard = ({ talent }) => {
         {/* Personal Details */}
         <div className="col-span-2 sm:col-span-8">
           <div className="details pr-6">
-            <h3 className="text-lg font-semibold">Aisha Johnson</h3>
+            <h3 className="text-lg font-semibold">
+              {firstName} {lastName}
+            </h3>
             <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-blue-500 shrink-0">
               <LuCheck className="icon" strokeWidth={3} />
             </span>

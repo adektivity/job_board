@@ -127,7 +127,7 @@
   }
 
   .nav-profile a {
-    @apply py-0.5 font-medium hover:border-b-2 border-ui-text;
+    @apply py-0.5 font-medium border-b-2 border-transparent hover:border-ui-text;
   }
 
   .nav-profile a.active {
@@ -137,5 +137,17 @@
   /* Profile buttons */
   .profileBtn {
     @apply text-ui-text bg-ui-bg py-1 px-3 text-center text-sm border border-ui-text rounded-sm;
+  }
+
+  /* Quick Actions /Find Talents */
+  .quick-action {
+    @apply border rounded-lg py-1;
+
+    & .title {
+      @apply text-base font-bold;
+    }
+    & .sub-title {
+      @apply text-xs text-[#000000] opacity-80 text-nowrap font-medium;
+    }
   }
 }

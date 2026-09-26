@@ -51,4 +51,11 @@
   .details-col {
     @apply flex flex-col flex-wrap justify-center gap-3;
   }
+
+  .flex-qa {
+    @apply flex items-center gap-2;
+  }
+  .flex-qa-col {
+    @apply flex flex-col;
+  }
 }
