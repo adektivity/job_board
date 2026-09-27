@@ -58,4 +58,8 @@
   .flex-qa-col {
     @apply flex flex-col;
   }
+
+  .icon-flex {
+    @apply inline-flex items-center gap-1;
+  }
 }
