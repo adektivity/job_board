@@ -14,7 +14,7 @@ const ProfileHeader = () => {
           />
         </div>
         {/* Personal Details */}
-        <div className="flex-col min-w-0">
+        <div className="flex-column min-w-0">
           <span className="inline-flex justify-center rounded-full border border-secondary bg-ui-green px-2 py-1 text-xs text-secondary font-semibold">
             Available for hire
           </span>

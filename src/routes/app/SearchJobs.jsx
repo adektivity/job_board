@@ -7,7 +7,7 @@ import { useAppContext } from "../../context/AppContext";
 const SearchJobs = () => {
   const { setKeyword, setLocation, setJobType, submitQuery } = useAppContext();
   return (
-    <div className="search-jobs flex-col">
+    <div className="search-jobs flex-column">
       <div className="search-title">
         <h1 className="font-bold capitalize mb-1">
           Find your next opportunity
